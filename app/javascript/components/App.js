@@ -1,17 +1,26 @@
-import React from "react"
+import React, { Component} from 'react'
+import Home from './pages/Home'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import PropTypes from "prop-types"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
 
-class App extends React.Component {
+
+class App extends Component {
   render() {
-    console.log("logged in:", this.props.logged_in)
-    console.log("current user:", this.props.current_user)
-    console.log("sign up:", this.props.new_user_route)
-    console.log("sign in:", this.props.sign_in_route)
-    console.log("sign out:", this.props.sign_out_route)
     return (
-      <>
-        <h1>Kick Ass Apartment App!</h1>
-      </>
+      <Router>
+        <Header {...this.props} />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/users/sign_in" />
+        </Routes>
+        <Footer />
+      </Router>
     )
   }
 }
