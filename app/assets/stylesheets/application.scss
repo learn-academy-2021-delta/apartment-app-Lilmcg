@@ -9,19 +9,31 @@
   /* ---GENERAL PAGE FORMATING--- */
   .page-body {
     text-align: center;
-    margin: 3rem;
-    height: 110vh;
+    margin-top: 170px;
   }
-  /* ---GENERAL BUTTON FORMATING--- */
-  .btn.btn-secondary {
+
+  button {
+    padding: 10px;
+    background-color: #cfdfef;
+    color: white;
+  }
+
+  button:hover {
+    cursor: pointer;
     background-color: #FF0080;
-    font-weight: bolder;
-    margin: 5px;
+    color: black;
   }
-  .btn.btn-secondary:hover {
-    color: #FF0080;
-    background-color: white;
-  }
+  
+  /* ---GENERAL BUTTON FORMATING--- */
+  // .btn.btn-secondary {
+  //   background-color: #FF0080;
+  //   font-weight: bolder;
+  //   margin: 5px;
+  // }
+  // .btn.btn-secondary:hover {
+  //   color: #FF0080;
+  //   background-color: white;
+  // }
   
   /* ---FOOTER--- */
   footer {
@@ -29,7 +41,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #cfdfef;
+    background-color: #c0d5ea;
     display: flex;
     justify-content: space-around;
   }
@@ -49,15 +61,17 @@
   /* ---HEADER--- */
   header {
     font-size: 20px;
-    background-color: #c0d5ea;
     display: flex;
     justify-content: space-between;
+    background-color: #c0d5ea;
     position: fixed;
     width: 100%;
     top: 0
   }
   .logo {
-    width: 100px;
+    // width: 100px;
+    // margin-left: 20px;
+    height: 150px;
     margin-left: 20px;
   }
   .nav-bar {
@@ -66,18 +80,27 @@
     padding-bottom: 10px;
   }
   
-  .nav-links {
+  .nav-link {
+    margin: 10px;
+    color: #cfdfef;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     padding-right: 50px;
+    text-decoration: none;
   }
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
   
   /* ---HOME--- */
   .homeimage {
     height: 500px;
     width: 750px;
-    padding-top: 10%;
+    margin-top: 200px
+    // padding-top: 10%;
   }
   div.background {
     background: url('../assets/homeimage.jpg') repeat;
@@ -98,16 +121,33 @@
   }
   
   /* ---INDEX--- */
-  .index-cards {
+  .card {
+    text-align: left;
+    border: 1px solid black;
+    padding: 40px;
+    border: 1px solid black;
+  }
+
+  .cards {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+
   }
-  .card.card-body {
-    width: 300px;
-    background-color: #FFFEF1;
-    margin: 20px;
+
+  .fa-icon {
+    font-size: 25px;
+    padding-right: 10px;
   }
+  // .index-cards {
+  //   display: flex;
+  //   justify-content: space-around;
+  //   flex-wrap: wrap;
+  // }
+  // .card.card-body {
+  //   width: 300px;
+  //   background-color: #FFFEF1;
+  //   margin: 20px;
+  // }
   
   /* ---NAV--- */
   a {
